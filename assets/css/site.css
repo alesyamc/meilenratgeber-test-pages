@@ -844,3 +844,36 @@ table.offers{border-top:1px solid var(--rule)}
 .figures dt{color:var(--ink)}
 .figures-src{color:#566173}
 .figures-src a{color:var(--navy)}
+
+/* Startseite: Vertrauenszeile, Überschrift und Gelb im Zahlenband (25.10.2026, Wunsch Alessia) */
+.hero-trust{display:flex;flex-wrap:wrap;gap:4px 0;margin:18px 0 0;font-size:.9375rem;color:var(--muted)}
+.hero-trust span+span::before{content:"·";margin:0 10px;color:var(--muted)}
+.hero-trust a{color:var(--navy);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.hero-trust a:hover{text-decoration-thickness:2px}
+.figures-h{margin:0 0 16px;font:600 .8125rem/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.figures dl>div{border-top:3px solid var(--sun)}
+@media (max-width:480px){.hero-trust{font-size:.8125rem}.hero-trust span+span::before{margin:0 6px}}
+
+/* Kopfzeile Nachtblau (25.10.2026, Alessia: „mehr Farbe“, Variante A)
+   Weißes Negativ-Logo, weiße Menüpunkte, gelber Button. Aufklappmenüs bleiben weiß. */
+.site-head,.site-head.scrolled{background:var(--navy);border-bottom:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+.site-head.scrolled{box-shadow:0 8px 24px -16px rgba(23,35,56,.6)}
+.nav .nav-link,.nav .is-active>.nav-link{color:#fff}
+.nav .nav-link:hover,.nav .has-sub.open>.nav-link{background:rgba(255,255,255,.1);color:#fff}
+.nav .nav-link:focus-visible,.head-cta:focus-visible,.brand:focus-visible,.nav-toggle:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.nav-toggle{background:rgba(255,255,255,.12);color:#fff}
+@media (max-width:899px){
+  .nav{background:var(--navy)}
+  .nav .nav-item{border-bottom-color:rgba(255,255,255,.14)}
+  .nav .sub a b{color:#fff}
+  .nav .sub a span{color:#c3d0de}
+  .nav .sub a:hover{background:rgba(255,255,255,.08)}
+  .nav .sub a:hover b{color:#fff}
+  .nav .sub a[aria-current="page"]{background:rgba(255,255,255,.1);box-shadow:inset 3px 0 0 var(--sun)}
+  .nav .sub a[aria-current="page"] b{color:#fff}
+  .nav .sub a.sub-feature{background:rgba(255,199,44,.14)}
+  .nav .sub a.sub-feature b{color:#fff}
+  .nav .sub a.sub-feature span{color:#c3d0de}
+  .nav .sub a.sub-feature .arr{color:var(--sun)}
+}
+@media (max-width:899px){.nav .sub,.nav .sub.wide{background:none}}
