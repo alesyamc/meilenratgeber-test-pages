@@ -1,0 +1,29 @@
+# Meilenratgeber
+
+> Meilenratgeber (www.meilenratgeber.de) ist ein unabhängiger deutschsprachiger Ratgeber zu Meilen- und Vielfliegerprogrammen. Er erklärt, wie man Meilen sammelt und einlöst und welche Kreditkarte zu welchem Reiseverhalten passt.
+
+Die Seite richtet sich an Menschen in Deutschland, die zwei bis sechs Mal im Jahr fliegen. Alle Zahlen stammen aus offiziellen Quellen: Programmseiten von Miles & More, Preisverzeichnisse und Bedingungen der Kartenanbieter. Jede Seite nennt ihre Quellen mit Abrufdatum und ein Stand-Datum. Meilenratgeber gehört zu keiner Airline, Bank oder keinem Kartenanbieter. Einige Links können Werbelinks sein; sie sind auf der Seite gekennzeichnet und ändern die Bewertung nicht.
+
+## Meilen sammeln und einlösen
+
+- [Meilen sammeln](https://www.meilenratgeber.de/meilen-sammeln/): alle Wege, Meilen zu sammeln, auch für Wenigflieger.
+- [Payback-Punkte in Meilen umwandeln](https://www.meilenratgeber.de/payback-punkte-in-meilen/): Umwandlung 1:1 ab 200 Punkten, Transferbonus-Aktionen, ab wann es sich lohnt.
+- [Miles & More: so funktioniert das Programm](https://www.meilenratgeber.de/miles-and-more/): Anmeldung, Sammeln, Status, Verfall nach 36 Monaten.
+- [Miles & More Meilen einlösen](https://www.meilenratgeber.de/miles-and-more-meilen-einloesen/): Prämienflug, Upgrade, Cash & Miles, Shop und was eine Meile wert ist.
+
+## Kreditkarten
+
+- [Meilen sammeln mit Kreditkarte](https://www.meilenratgeber.de/meilen-sammeln-kreditkarte/): Vergleich mit Rechnung, was 1.000 Meilen je Karte kosten.
+- [Miles & More Kreditkarte](https://www.meilenratgeber.de/miles-and-more-kreditkarte/): MyFlex, Blue und Gold der Deutschen Bank im Vergleich.
+- [American Express und Meilen](https://www.meilenratgeber.de/american-express-meilen/): Membership Rewards, Transferpartner und Punktewert.
+- [PAYBACK American Express](https://www.meilenratgeber.de/payback-american-express/): Punkte, Kosten und Nachteile der kostenlosen Karte.
+- [Eurowings Kreditkarte](https://www.meilenratgeber.de/eurowings-kreditkarte/): Classic und Premium mit Gebühren, Versicherungen und Reisevorteilen.
+- [Reisekreditkarte](https://www.meilenratgeber.de/reisekreditkarte/): Kosten im Ausland und Karten ohne Fremdwährungsentgelt.
+- [Kreditkarte mit Lounge-Zugang](https://www.meilenratgeber.de/kreditkarte-lounge-zugang/): welche Karte wie oft in die Lounge lässt.
+
+## Über die Seite
+
+- [Startseite](https://www.meilenratgeber.de/)
+- [So arbeiten wir](https://www.meilenratgeber.de/so-arbeiten-wir/): Quellen, Stand-Datum, Rechenformeln und Kennzeichnung von Werbelinks.
+- [Impressum](https://www.meilenratgeber.de/impressum.html)
+- [Datenschutz](https://www.meilenratgeber.de/datenschutz.html)
