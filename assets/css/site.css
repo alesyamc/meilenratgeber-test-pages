@@ -1022,7 +1022,7 @@ table.ledger{border:0;box-shadow:var(--lift)}
 .konto tr.stand td{font:400 var(--fs-xs)/1.2 var(--sans);color:var(--muted)}
 @media (min-width:761px){.hero-intro{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}}
 .home-hero h1{font-size:clamp(2.05rem,1.3rem + 2.2vw,2.95rem)}
-@media (max-width:600px){.summary dl>div{grid-template-columns:7.25rem minmax(0,1fr)}}
+@media (max-width:600px){.summary dl>div{grid-template-columns:7.25rem minmax(0,1fr)}.summary dt{min-width:0;overflow-wrap:anywhere;hyphens:auto}}
 /* Saldo-Zeile: eine Fläche, die Hauptzahl kräftiger */
 table.ledger tfoot tr>*,table.ledger.saldo-table tfoot td:empty{background:var(--sun-wash)}
 table.ledger.saldo-table tfoot td.big{background:var(--sun-soft)}
