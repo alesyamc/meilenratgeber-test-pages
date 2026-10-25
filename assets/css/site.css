@@ -877,3 +877,153 @@ table.offers{border-top:1px solid var(--rule)}
   .nav .sub a.sub-feature .arr{color:var(--sun)}
 }
 @media (max-width:899px){.nav .sub,.nav .sub.wide{background:none}}
+
+/* ===== Neue Darstellung (25.10.2026, Alessia: „Tabellen und Kästen wirken altmodisch“) =====
+   Antwort und Zahl zuerst, weniger Linien und Rahmen, Weißraum statt Raster. Eckig nach Regel;
+   rund bleiben nur Pillen-Buttons und Kreiszeichen. Gilt für alle Seiten. */
+:root{--sun-soft:#fff4d1;--sun-wash:#fff8e1;--rule-soft:#e9eef2;--lift:0 1px 0 rgba(23,35,56,.04),0 18px 36px -28px rgba(23,35,56,.38)}
+
+/* Abschnittsnummer: kleine Zeile statt gelber Plakette */
+.prose>section[id]>h2::before,.prose>section.band>h2::before{display:flex;align-items:center;gap:10px;background:none;padding:0;margin:0 0 12px;
+  font:700 .8125rem/1 var(--sans);letter-spacing:.14em;color:var(--navy)}
+.prose>section[id]>h2::after{content:none}
+.prose>section[id]>h2{position:relative}
+.prose>section[id]>h2::before{content:counter(sec,decimal-leading-zero) "\2002\2014"}
+
+/* Kurz gesagt: Zahl groß, Aussage darunter */
+.summary{background:var(--card);color:var(--text);box-shadow:inset 3px 0 0 var(--sun),var(--lift);padding:26px 28px 24px;border:0}
+.summary h2{font:700 .8125rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0 0 20px}
+.summary dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(11.5rem,100%),1fr));gap:24px 28px}
+.summary dl>div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:0;padding:0;border:0}
+.summary dd{text-align:left;white-space:normal;font:600 clamp(1.5rem,1.25rem + .8vw,1.95rem)/1.1 var(--serif);color:var(--navy);letter-spacing:-.015em;
+  padding-bottom:12px;margin-bottom:10px;background:linear-gradient(var(--sun),var(--sun)) left bottom/24px 3px no-repeat}
+.summary dt{font-size:var(--fs-small);line-height:1.45;color:var(--muted)}
+@media (max-width:600px){
+  .summary{padding:22px 18px 18px}
+  .summary dl{grid-template-columns:1fr;gap:0}
+  .summary dl>div{display:grid;grid-template-columns:minmax(6.5rem,auto) minmax(0,1fr);gap:14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--rule-soft)}
+  .summary dl>div:first-child{border-top:0;padding-top:0}
+  .summary dd{grid-column:1;grid-row:1;font-size:1.3rem;padding:0;margin:0;background:none}
+  .summary dt{grid-column:2;grid-row:1}
+}
+
+/* Kontokarte im Seitenkopf: ohne Doppellinie und Balken oben */
+.konto,.hero-visual .konto{border:0;border-top:0;box-shadow:var(--lift);padding:22px 24px 18px}
+.konto th,.konto td{border-top:1px solid var(--rule-soft);padding:10px 0}
+.konto tr.stand th,.konto tr.stand td{border-top:0;font-size:var(--fs-xs);color:var(--muted);font-weight:400}
+.konto td{font:600 1.0625rem/1.2 var(--serif);color:var(--navy)}
+.konto tr.sum th,.konto tr.sum td{border-top:1px solid var(--rule-soft)}
+.konto tr.sum td{font:600 1.6rem/1 var(--serif);color:var(--navy)}
+.konto tr.sum td{background:none}
+.konto-t{font-size:1.2rem}
+
+/* Kurzfakten je Weg: Spalten ohne Rahmen, Sammelrate als Marke */
+.wayline{border:0;background:var(--card);box-shadow:var(--lift);gap:0}
+.wayline>div{border-left:0;padding:16px 20px}
+.wayline>div+div{box-shadow:inset 1px 0 0 var(--rule-soft)}
+.wayline dt{font:700 .75rem/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.wayline>div:nth-child(2) dd:not(.plain){background:var(--sun-soft);padding:3px 9px;margin-left:0}
+.wayline:hover{transform:none;box-shadow:var(--lift)}
+@media (max-width:600px){.wayline{padding:6px 0}.wayline>div+div{box-shadow:none}.wayline>div{padding:8px 16px}}
+
+/* Tabellen: keine Außenrahmen, keine grauen Köpfe, keine Doppellinie */
+table.ledger{border:0;box-shadow:var(--lift)}
+.ledger caption{font:700 .75rem/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
+.ledger thead th{background:none;font:700 .75rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);padding-top:14px}
+.ledger th,.ledger td{border-bottom:1px solid var(--rule-soft);padding:13px 16px}
+.ledger tbody th{color:var(--ink)}
+.ledger td.num{font-weight:600;color:var(--ink)}
+.ledger tbody tr{transition:background .15s}
+.ledger tbody tr:hover{background:#fafbfc}
+.ledger tfoot td,.saldo-table tfoot th{border-top:0;background:var(--sun-wash)}
+.saldo-table tfoot th{border-top:0}
+.saldo-table tfoot td{background:var(--sun-wash)}
+.saldo-table tfoot td.big{background:var(--sun-soft);color:var(--navy)}
+@media (max-width:600px){
+  table.ledger.stack{box-shadow:none;background:none}
+  table.ledger.stack tbody tr{background:var(--card);box-shadow:var(--lift);margin-bottom:10px;border:0;padding:10px 0}
+  .saldo-table tfoot tr{border-top:0;background:var(--sun-wash)}
+}
+
+/* Rechenbeispiel: helle Fläche statt dunklem Band */
+.band{background:var(--card);color:var(--text);box-shadow:var(--lift);border:0;padding:36px 34px}
+.band h2{color:var(--ink)}
+.band a{color:var(--navy)}
+.band .ledger caption{color:var(--muted)}
+.band table.ledger{box-shadow:none;border-top:1px solid var(--rule)}
+.band .assessment{background:var(--sun-wash);border:0;box-shadow:inset 3px 0 0 var(--sun);color:var(--ink);padding:16px 20px}
+.saldo{border-top:0;padding-top:0}
+@media (max-width:600px){.band{padding:28px var(--gutter);box-shadow:none}.band table.ledger{border-top:0}}
+
+/* Rechner (Kreditkarten-Vergleich) */
+.rechner{margin:22px 0 18px;padding:22px 24px;background:var(--paper)}
+.rechner[hidden]{display:none}
+.r-feld{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.r-feld output{font:600 1.5rem/1 var(--serif);color:var(--navy);white-space:nowrap}
+.rechner input[type=range]{width:100%;accent-color:var(--navy);height:28px;margin:0 0 18px}
+.r-k{font:700 .75rem/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.r-liste{list-style:none;margin:0;padding:0}
+.r-liste li{display:grid;grid-template-columns:minmax(0,1fr) 6.5rem;grid-template-areas:"name wert" "bar wert" "meilen wert";column-gap:16px;padding:12px 0;border-top:1px solid var(--rule)}
+.r-liste li:first-child{border-top:0}
+.r-name{grid-area:name;font-weight:600;color:var(--ink)}
+.r-meilen{grid-area:meilen;font-size:var(--fs-xs);color:var(--muted)}
+.r-bar{grid-area:bar;height:8px;background:var(--rule-soft);margin:7px 0 5px;position:relative;overflow:hidden}
+.r-bar i{position:absolute;inset:0 auto 0 0;background:var(--navy);transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.r-wert{grid-area:wert;align-self:center;text-align:right;font:600 1.35rem/1 var(--serif);color:var(--navy);font-variant-numeric:tabular-nums}
+.r-liste li.best .r-bar i{background:var(--plus)}
+.r-liste li.best .r-wert{color:var(--plus)}
+.r-tabellen{margin:6px 0 18px}
+.r-tabellen>summary{cursor:pointer;font-weight:600;color:var(--navy);padding:6px 0}
+.r-tabellen[open]>summary{margin-bottom:10px}
+@media (max-width:600px){.rechner{padding:18px 16px;margin-left:calc(var(--gutter) * -1);margin-right:calc(var(--gutter) * -1)}.r-liste li{grid-template-columns:minmax(0,1fr) 5.5rem}}
+@media (prefers-reduced-motion:reduce){.r-bar i,.ledger tbody tr{transition:none}}
+
+/* Startseite: Einstieg nach Situation statt Fensterbild */
+.home-hero .wrap{display:block;padding-top:clamp(34px,4.5vw,64px);padding-bottom:clamp(36px,4.5vw,60px)}
+.hero-intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:end}
+.home-hero h1{max-width:none;font-size:clamp(2.05rem,1.3rem + 2.6vw,3.3rem);line-height:1.05}
+.home-hero .lead{margin:0;font-size:1.1875rem}
+.home-hero .hero-trust{margin-top:14px}
+.wege{margin-top:clamp(32px,4vw,52px)}
+.wege-h{font:700 .8125rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0 0 22px}
+.wege-route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;position:relative;counter-reset:weg}
+.wege-route::before{content:"";position:absolute;left:7px;right:7px;top:6px;height:2.6px;background:linear-gradient(90deg,var(--amber),var(--navy))}
+.wege-route li{position:relative;padding-top:30px;counter-increment:weg}
+.wege-route li::before{content:"";position:absolute;left:0;top:0;width:15px;height:15px;border-radius:50%;background:#fff;border:2.6px solid var(--navy);box-sizing:border-box}
+.wege-route li:first-child::before{background:var(--amber);border-color:var(--amber)}
+.wege-route li:last-child::before{background:var(--navy)}
+.weg{display:flex;flex-direction:column;height:100%;padding:20px 20px 18px;background:var(--card);color:var(--text);text-decoration:none;box-shadow:var(--lift);position:relative;transition:transform .2s,box-shadow .2s}
+.weg::before{content:counter(weg,decimal-leading-zero);font:700 .75rem/1 var(--sans);letter-spacing:.12em;color:var(--muted)}
+.weg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--sun);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.weg:hover{transform:translateY(-4px);color:var(--text);box-shadow:0 1px 0 rgba(23,35,56,.04),0 26px 44px -26px rgba(23,35,56,.45)}
+.weg:hover::after,.weg:focus-visible::after{transform:scaleX(1)}
+.weg .titel{font:600 1.3rem/1.2 var(--serif);color:var(--ink);margin:10px 0 8px;letter-spacing:-.01em}
+.weg .text{font-size:var(--fs-small);line-height:1.45;color:var(--muted)}
+.weg .go{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;font-size:var(--fs-xs);color:var(--navy)}
+.pfeil{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid var(--navy);display:grid;place-items:center;transition:background .2s,border-color .2s}
+.pfeil::before{content:"";width:8px;height:8px;border:solid var(--navy);border-width:2px 2px 0 0;transform:translateX(-2px) rotate(45deg)}
+.weg:hover .pfeil,.weg:focus-visible .pfeil{background:var(--sun);border-color:var(--sun)}
+@media (max-width:1020px){.wege-route{grid-template-columns:repeat(2,minmax(0,1fr))}.wege-route::before,.wege-route li::before{display:none}.wege-route li{padding-top:0}}
+@media (max-width:760px){
+  .hero-intro{grid-template-columns:1fr;gap:16px}
+  .wege-route{grid-template-columns:1fr;gap:10px;padding-left:26px}
+  .wege-route::before{display:block;left:6px;right:auto;top:12px;bottom:12px;width:2.6px;height:auto;background:linear-gradient(180deg,var(--amber),var(--navy))}
+  .wege-route li::before{display:block;left:-26px;top:50%;margin-top:-7px}
+  .weg{display:grid;grid-template-columns:minmax(0,1fr) 36px;column-gap:12px;padding:15px 16px}
+  .weg::before{display:none}
+  .weg .titel{font-size:1.15rem;margin:0 0 3px}
+  .weg .go{grid-column:2;grid-row:1/span 2;margin:0;padding:0;align-self:center}
+  .weg .go>span:first-child{display:none}
+}
+@media (prefers-reduced-motion:reduce){.weg,.weg::after,.pfeil{transition:none}.weg:hover{transform:none}}
+/* Neue Darstellung: Feinschliff */
+.prose>section[id]>h2::before{content:counter(sec,decimal-leading-zero);display:inline-flex;padding-right:34px;background:linear-gradient(var(--amber),var(--amber)) right center/24px 2px no-repeat}
+.prose>section[id]>h2::before{display:table}
+.konto tr.stand td{font:400 var(--fs-xs)/1.2 var(--sans);color:var(--muted)}
+@media (min-width:761px){.hero-intro{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}}
+.home-hero h1{font-size:clamp(2.05rem,1.3rem + 2.2vw,2.95rem)}
+@media (max-width:600px){.summary dl>div{grid-template-columns:7.25rem minmax(0,1fr)}}
+/* Saldo-Zeile: eine Fläche, die Hauptzahl kräftiger */
+table.ledger tfoot tr>*,table.ledger.saldo-table tfoot td:empty{background:var(--sun-wash)}
+table.ledger.saldo-table tfoot td.big{background:var(--sun-soft)}
+@media (max-width:600px){.wayline>div{grid-template-columns:6.25rem minmax(0,1fr)}.wayline dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}}

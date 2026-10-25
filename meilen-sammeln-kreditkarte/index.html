@@ -26,8 +26,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/meilenratgeber-test-pages/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/meilenratgeber-test-pages/assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/meilenratgeber-test-pages/assets/css/site.css">
-<link rel="stylesheet" href="/meilenratgeber-test-pages/assets/css/tweaks.css">
+<link rel="stylesheet" href="/meilenratgeber-test-pages/assets/css/site.css?v=20261025">
+<link rel="stylesheet" href="/meilenratgeber-test-pages/assets/css/tweaks.css?v=20261025">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.meilenratgeber.de/#org", "name": "Meilenratgeber", "url": "https://www.meilenratgeber.de/", "logo": "https://www.meilenratgeber.de/assets/img/favicon-512.png", "description": "Unabhängiger deutschsprachiger Ratgeber zu Meilen- und Vielfliegerprogrammen: verständlich erklärt und ehrlich nachgerechnet, für Wenig- und Vielflieger."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Meilen sammeln mit Kreditkarte: welche Karte sich für Sie rechnet", "description": "Miles & More MyFlex, Blue, Gold und American Express im Vergleich: Meilen pro Euro, Gebühr, Meilenschutz und was 1.000 Meilen kosten. Mit Quellen.", "inLanguage": "de-DE", "dateModified": "2026-10-24", "datePublished": "2026-10-24", "mainEntityOfPage": "https://www.meilenratgeber.de/meilen-sammeln-kreditkarte/", "publisher": {"@id": "https://www.meilenratgeber.de/#org"}, "author": {"@id": "https://www.meilenratgeber.de/#org"}}</script>
@@ -125,6 +125,19 @@
 <section id="rechnung" class="band">
 <h2>Was kostet eine Meile bei Ihrem Umsatz?</h2>
 <p>Bei 1.000 € Umsatz im Monat kosten 1.000 Meilen über die Kartengebühr 0 € mit der MyFlex, 11 € mit der Blue, 15 € mit der American Express Card und 23 € mit der Gold. Teilt man die Kosten der Karte im Jahr durch die gesammelten Meilen, sieht man, was 1.000 Meilen über die Karte kosten. Gerechnet ist nur der Umsatz mit der Karte, ohne Willkommensbonus und ohne Extrapunkte bei Partnern.</p>
+<div class="rechner" data-rechner hidden>
+<label class="r-feld" for="r-umsatz"><span>Ihr Umsatz mit der Karte im Monat</span><output id="r-umsatz-out" for="r-umsatz">1.000 €</output></label>
+<input type="range" id="r-umsatz" min="100" max="5000" step="100" value="1000">
+<p class="r-k">So viel kosten Sie 1.000 Meilen über die Kartengebühr</p>
+<ul class="r-liste" aria-live="polite">
+<li data-gebuehr="0" data-euro="2"><span class="r-name">MyFlex</span><span class="r-meilen"></span><span class="r-bar"><i></i></span><b class="r-wert"></b></li>
+<li data-gebuehr="66" data-euro="2"><span class="r-name">Blue</span><span class="r-meilen"></span><span class="r-bar"><i></i></span><b class="r-wert"></b></li>
+<li data-gebuehr="138" data-euro="2"><span class="r-name">Gold</span><span class="r-meilen"></span><span class="r-bar"><i></i></span><b class="r-wert"></b></li>
+<li data-gebuehr="60" data-euro="3"><span class="r-name">American Express Card</span><span class="r-meilen"></span><span class="r-bar"><i></i></span><b class="r-wert"></b></li>
+<li data-gebuehr="75" data-euro="2"><span class="r-name">American Express Card mit Turbo</span><span class="r-meilen"></span><span class="r-bar"><i></i></span><b class="r-wert"></b></li>
+</ul>
+</div>
+<details class="r-tabellen"><summary>Rechnung als Tabelle: 500, 1.000 und 2.000 € im Monat</summary>
 <div class="ledger-wrap"><table class="ledger stack">
 <caption>Miles &amp; More Meilen im Jahr</caption>
 <thead><tr><th scope="col">Umsatz mit der Karte</th><th scope="col" class="num">Miles &amp; More Karten</th><th scope="col" class="num">American Express Card</th><th scope="col" class="num">mit Turbo</th></tr></thead>
@@ -143,6 +156,7 @@
 </tbody>
 <tfoot><tr><th scope="row">Gold im ersten Jahr mit 20.000 Meilen Bonus, 1.000 € im Monat</th><td class="num" data-label="MyFlex"></td><td class="num" data-label="Blue"></td><td class="num big count" data-label="Gold">5,31 €</td><td class="num" data-label="Amex Card"></td></tr></tfoot>
 </table></div>
+</details>
 <p>Mit Turbo kostet die American Express Card 75 € im Jahr; 1.000 Meilen kosten dann 25,00 €, 12,50 € und 6,25 € bei 500, 1.000 und 2.000 € Umsatz im Monat.</p>
 <p class="assessment">Unsere Einschätzung aus dieser Rechnung: Die MyFlex ist die günstigste Art, mit Karte Meilen zu sammeln, wenn Sie die Abrechnung immer vollständig bezahlen und Ihre Meilen innerhalb von 36 Monaten einlösen. Für Meilenschutz zahlen Sie bei der Blue 66 € im Jahr. Die Gold lohnt sich im ersten Jahr über den Bonus, danach nur, wenn Ihnen ihre weiteren Leistungen etwas wert sind.</p>
 </section>
@@ -201,6 +215,6 @@
 </div>
 </div>
 </footer>
-<script src="/meilenratgeber-test-pages/assets/js/main.js" defer></script>
+<script src="/meilenratgeber-test-pages/assets/js/main.js?v=20261025" defer></script>
 </body>
 </html>

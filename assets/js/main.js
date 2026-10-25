@@ -261,3 +261,23 @@ var QUIZ_REGELN={
     try{p=new URL(a.href,location.href).pathname+(a.hash||'');}catch(x){}senden({c:p.split('#')[0]});});
   liste.hidden=true; quiz.hidden=false; zeige(0);
 })();
+
+/* Rechner „Was kostet eine Meile bei Ihrem Umsatz?“ (25.10.2026): Kartengebühr im Jahr geteilt durch die gesammelten Meilen.
+   Ohne JavaScript bleibt der Rechner verborgen, die Tabellen darunter tragen die Rechnung. */
+(function(){
+  var r=document.querySelector('[data-rechner]'); if(!r) return;
+  var inp=r.querySelector('input[type=range]'), out=r.querySelector('output'), rows=[].slice.call(r.querySelectorAll('.r-liste li'));
+  var ganz=new Intl.NumberFormat('de-DE',{maximumFractionDigits:0}), euro=new Intl.NumberFormat('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function rechne(){
+    var u=+inp.value, werte=rows.map(function(li){var m=u*12/(+li.getAttribute('data-euro'));return {li:li,m:m,k:(+li.getAttribute('data-gebuehr'))/(m/1000)};});
+    var max=Math.max.apply(null,werte.map(function(w){return w.k;}))||1, min=Math.min.apply(null,werte.map(function(w){return w.k;}));
+    out.textContent=ganz.format(u)+' €';
+    werte.forEach(function(w){
+      w.li.querySelector('.r-meilen').textContent=ganz.format(w.m)+' Meilen im Jahr';
+      w.li.querySelector('.r-wert').textContent=euro.format(w.k)+' €';
+      w.li.querySelector('.r-bar i').style.width=Math.max(w.k/max*100,w.k?2:0)+'%';
+      w.li.classList.toggle('best',w.k===min);
+    });
+  }
+  inp.addEventListener('input',rechne); rechne(); r.hidden=false;
+})();
